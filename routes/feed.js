@@ -4,6 +4,8 @@ const feedController = require('../controllers/feed-controller');
 
 const router = express.Router();
 
-router.report('/posts', feedController.getPost);
+router.get('/feed', feedController.getPost);
+
+router.post('/post', feedController.createtPost);
 
 module.exports = router;
