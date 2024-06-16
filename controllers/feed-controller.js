@@ -15,13 +15,18 @@ exports.getPost = (req, res, next) => {
   });
 };
 
-exports.createtPost = (req, res, next) => {
-  // Databas
+exports.createPost = (req, res, next) => {
   const title = req.body.title;
   const content = req.body.content;
 
   res.status(201).json({
     message: 'Post Created!',
-    post: { id: new Date().toISOString(), title: title, content: content },
+    post: {
+      _id: new Date().toISOString(),
+      title: title,
+      content: content,
+      creator: { name: 'Goja' },
+      createdAt: new Date(),
+    },
   });
 };

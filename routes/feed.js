@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.get('/posts', feedController.getPost);
 
-router.post('/post', feedController.createtPost);
+router.post('/post', feedController.createPost);
 
 module.exports = router;
